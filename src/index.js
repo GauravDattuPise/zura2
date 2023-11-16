@@ -34,7 +34,7 @@ app.use("/project", require("./route/projectRoute"))
 app.use(express.static(path.join(__dirname, "../../client/build")));
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "../../client/index.html"),
+  res.sendFile(path.join(__dirname, "../../client/build/index.html"),
     function (err) {
       res.status(500).send(err);
     }
