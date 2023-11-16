@@ -31,10 +31,10 @@ app.use("/user", require("./route/userRoute"))
 app.use("/project", require("./route/projectRoute"))
 
 //static files for
-app.use(express.static(path.join(__dirname, "../src/client/build")));
+app.use(express.static(path.join(__dirname, "../../client/build")));
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "../src/client/index.html"),
+  res.sendFile(path.join(__dirname, "../../client/index.html"),
     function (err) {
       res.status(500).send(err);
     }
